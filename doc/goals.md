@@ -13,6 +13,7 @@
 		- Import a code base in a specific language and generate UML from it
 		- Allow users to create permanent links to view or edit diagrams
 		- Allow multiple users to edit a diagram simultaneously
+		- Offer web and Electron interfaces
 
 ## Features for the future
 
