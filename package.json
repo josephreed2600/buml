@@ -1,0 +1,30 @@
+{
+  "name": "buml",
+  "version": "1.0.0",
+  "description": "A Better UML",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "pug": "^2.0.4",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josephreed2600/buml.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josephreed2600/buml/issues"
+  },
+  "homepage": "https://github.com/josephreed2600/buml#readme"
+}
