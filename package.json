@@ -1,0 +1,25 @@
+{
+  "name": "buml",
+  "version": "0.0.0",
+  "description": "A Better UML",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josephreed2600/buml.git"
+  },
+  "keywords": [
+    "UML"
+  ],
+  "author": "Chloe Schmollinger, Joe Reed",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/josephreed2600/buml/issues"
+  },
+  "homepage": "https://github.com/josephreed2600/buml",
+  "devDependencies": {
+    "electron": "^8.1.1"
+  }
+}
