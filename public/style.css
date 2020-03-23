@@ -1,16 +1,69 @@
-/* * {
+* {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 100;
     padding: 0;
     margin: 0;
     align-items: center;
     justify-content: center;
     text-align: center;
-    align-content: center;
-    justify-items: center;
-    color: dodgerblue;
+    /* align-content: center; */
+    /* justify-items: center; */
+    background: #333;
+    color: white;
 }
 
-html {
-    display: flex;
+body {
+    display: grid;
+    grid-template-areas: 'nav' 'content' 'footer';
+    grid-template-rows: 5fr 90fr 5fr;
     height: 100vh;
     width: 100vw;
-} */
+}
+
+header {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100vw;
+}
+
+.navbar {
+    text-decoration: none;
+    width: 100%;
+    padding: 20px 0;
+    font-size: 24pt;
+    transition: all 0.5s ease-in-out;
+}
+
+.navbar:hover {
+    background: #555;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    grid-area: content;
+    height: 100%;
+    width: 100%;
+}
+
+footer {
+    grid-area: footer;
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    font-size: 200pt;
+}
+
+h2 {
+    font-size: 14pt;
+    font-style: italic;
+}
+
+b {
+    /* font-weight: 900; */
+    color: dodgerblue;
+}
