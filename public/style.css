@@ -12,6 +12,10 @@
     color: #ddd;
 }
 
+html {
+    display: flex;
+}
+
 body {
     display: grid;
     grid-template-areas: 'nav' 'content' 'footer';
