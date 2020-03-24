@@ -1,0 +1,6 @@
+extends layout
+block content
+    section
+        a(class='interaction' href=link) Add Interaction
+        each item in data
+            a(class='interaction' href=item.link) #{item.id}
