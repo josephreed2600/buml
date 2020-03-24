@@ -1,4 +1,5 @@
 const fs = require('fs');
+const nav = require('./nav.json')
 
 const getData = () => {
     if (!fs.existsSync('data.json')) {
@@ -17,11 +18,7 @@ const addData = newData => {
 const index = (req, res) => {
     res.render('index', {
         title: 'Homepage',
-        navbar: {
-            'Home': '/',
-            'Diagrams': '/diagrams',
-            'Test': '/test'
-        }
+        navbar: nav
     });
 }
 
@@ -43,11 +40,7 @@ const diagram = (req, res) => {
     res.render('diagram', {
         title: 'Diagram',
         id: req.params.id,
-        navbar: {
-            'Home': '/',
-            'Diagrams': '/diagrams',
-            'Test': '/test'
-        }
+        navbar: nav
     })
 }
 
@@ -57,11 +50,7 @@ const diagrams = (req, res) => {
         title: 'Diagrams',
         link: `/diagram/${Math.floor(Math.random() * 100) + 1}`,
         data: data,
-        navbar: {
-            'Home': '/',
-            'Diagrams': '/diagrams',
-            'Test': '/test'
-        }
+        navbar: nav
     })
 }
 
