@@ -69,5 +69,25 @@ h2 {
 
 b {
     /* font-weight: 900; */
-    color: dodgerblue;
+    color: #3879b9;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.interaction {
+    display: flex;
+    font-size: 50px;
+    width: 20vw;
+    height: 20vh;
+    text-decoration: none;
+    border: white 4px solid;
+    border-radius: 40px;
+    margin: 5px;
+    transition: all 0.2s ease-in-out;
+}
+.interaction:hover {
+    background: #555;
 }
