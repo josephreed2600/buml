@@ -19,14 +19,13 @@ const index = (req, res) => {
         title: 'Homepage',
         navbar: {
             'Home': '/',
-            // 'Interaction': `/interaction/${Math.floor(Math.random() * 100) + 1}`,
-            'Interactions': '/interactions',
+            'Diagrams': '/diagrams',
             'Test': '/test'
         }
     });
 }
 
-const interaction = (req, res) => {
+const diagram = (req, res) => {
     let linkExists = false;
     for(let d of getData()) {
         if (d.id === req.params.id) {
@@ -37,31 +36,30 @@ const interaction = (req, res) => {
     if(!linkExists){
         addData({
             id: req.params.id,
-            link: `/interaction/${req.params.id}`
+            link: `/diagram/${req.params.id}`
         });
     }
 
-    res.render('interaction', {
-        title: 'Interaction',
+    res.render('diagram', {
+        title: 'Diagram',
         id: req.params.id,
         navbar: {
             'Home': '/',
-            // 'Interaction': `/interaction/${Math.floor(Math.random() * 100) + 1}`,
-            'Interactions': '/interactions',
+            'Diagrams': '/diagrams',
             'Test': '/test'
         }
     })
 }
 
-const interactions = (req, res) => {
+const diagrams = (req, res) => {
     let data = getData();
-    res.render('interactions', {
-        title: 'Interaction',
-        link: `/interaction/${Math.floor(Math.random() * 100) + 1}`,
+    res.render('diagrams', {
+        title: 'Diagrams',
+        link: `/diagram/${Math.floor(Math.random() * 100) + 1}`,
         data: data,
         navbar: {
             'Home': '/',
-            'Interactions': '/interactions',
+            'Diagrams': '/diagrams',
             'Test': '/test'
         }
     })
@@ -70,6 +68,6 @@ const interactions = (req, res) => {
 
 module.exports = {
     index,
-    interaction,
-    interactions
+    diagram,
+    diagrams,
 }

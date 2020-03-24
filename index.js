@@ -13,7 +13,10 @@ app.use(express.static(path.join(__dirname + '/public')));
 
 
 app.get('/', routes.index);
-app.get('/interaction/:id', routes.interaction);
-app.get('/interactions', routes.interactions)
+app.get('/diagram/:id', routes.diagram);
+app.get('/diagrams', routes.diagrams);
+// app.get('/delete', routes.delete);
+
+// app.post('/diagrams', routes.deletedDiagram) // make better name for route?
 
 app.listen(process.env.PORT);
