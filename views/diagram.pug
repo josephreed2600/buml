@@ -1,3 +1,20 @@
 extends layout
 block content
-    h1 #{id}
+    //- test
+    link(rel='stylesheet' href='/diagram.css')
+    div(id="editor-ctr")
+        div(id="editor-top-bar")
+            div(id="editor-top-bar-logo") logo
+            div(id="editor-top-bar-content")
+                input(type="text", placeholder="Untitled Diagram", id="diagram-name")
+                ul(id="menus", class="plain")
+                    li Import
+                    li Export
+            div(id="share-button") share
+        div(id="editor-area")
+        div(id="pane")
+        div(id="editor-nav-tool-ctr")
+            //- either replace these with icon images, or redesign them in html, or fix them
+            div(class="editor-nav-tool", id="editor-nav-hand")
+            div(class="editor-nav-tool", id="editor-nav-zoom-in") +
+            div(class="editor-nav-tool", id="editor-nav-zoom-out") -

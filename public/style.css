@@ -58,6 +58,7 @@ main {
     grid-area: content;
     height: 100%;
     width: 100%;
+    position: relative;
 }
 
 footer {
@@ -112,4 +113,10 @@ section {
 
 .diagram:hover {
     background: #555;
+}
+
+ul.plain, ol.plain, li.plain {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
