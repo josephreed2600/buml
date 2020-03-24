@@ -1,11 +1,17 @@
 * {
     font-family: 'Comfortaa', sans-serif;
+    /* font-family: 'Baloo 2', cursive; */
+    /* font-family: 'Ubuntu', sans-serif; */
+    /* font-family: 'Sniglet', cursive; */
+    /* font-family: 'Comic sans MS', cursive; */
     font-weight: 100;
     padding: 0;
     margin: 0;
     align-items: center;
     justify-content: center;
     text-align: center;
+    /* overflow-y: hidden; */
+    overflow-x: hidden;
     /* align-content: center; */
     /* justify-items: center; */
     background: #333;
@@ -53,41 +59,55 @@ main {
 }
 
 footer {
+    display: flex;
     grid-area: footer;
     height: 100%;
     width: 100%;
+    min-height: 30px;
 }
 
 h1 {
+    /* font-family: 'Comfortaa', sans-serif; */
     font-size: 200pt;
+    background: linear-gradient(to right,#b93883,#3879b9,#38b983,#b9ac38);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 h2 {
+    /* font-family: 'Comfortaa', sans-serif; */
     font-size: 14pt;
+    font-weight: 900;
     font-style: italic;
 }
 
 b {
-    /* font-weight: 900; */
-    color: #3879b9;
+    font-weight: 100;
+    /* text-decoration: underline; */
+    /* background: linear-gradient(to right,#b93883,#3879b9,#38b983,#b9ac38);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
 }
 
 section {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    /* overflow-y: auto; */
 }
+
 .diagram {
     display: flex;
     font-size: 50px;
-    width: 20vw;
-    height: 20vh;
+    width: 30vw;
+    height: 30vh;
     text-decoration: none;
     border: white 4px solid;
     border-radius: 40px;
     margin: 5px;
     transition: all 0.2s ease-in-out;
+    overflow: hidden;
 }
+
 .diagram:hover {
     background: #555;
 }
