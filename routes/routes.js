@@ -11,9 +11,12 @@ const getData = () => {
 const addData = newData => {
     let data = getData();
     data.push(newData);
-    fs.writeFileSync('data.json',JSON.stringify(data));
+    fs.writeFileSync('data.json',JSON.stringify(data, null, 4));
 }
 
+const updateData = newData => {
+    fs.writeFileSync('data.json',JSON.stringify(newData, null, 4));
+}
 
 const index = (req, res) => {
     res.render('index', {
@@ -54,9 +57,35 @@ const diagrams = (req, res) => {
     })
 }
 
+const remove = (req, res) => {
+    res.render('remove', {
+        title: 'Remove',
+        navbar: nav
+    });
+}
+
+const removeDiagram = (req, res) => {
+    let data = getData();
+    for(let i = 0; i< data.length; i++) {
+        if (data[i].id === req.body.id){
+            delete data[i];
+            break;
+        }
+    }
+    let newData = [];
+    data.forEach(item => {
+        if (item !== null){
+            newData.push(item);
+        }
+    });
+    updateData(newData);
+    res.redirect('/diagrams');
+}
 
 module.exports = {
     index,
     diagram,
     diagrams,
+    remove,
+    removeDiagram
 }
