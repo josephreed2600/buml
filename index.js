@@ -13,5 +13,7 @@ app.use(express.static(path.join(__dirname + '/public')));
 
 
 app.get('/', routes.index);
+app.get('/interaction/:id', routes.interaction);
+app.get('/interactions', routes.interactions)
 
 app.listen(process.env.PORT);
